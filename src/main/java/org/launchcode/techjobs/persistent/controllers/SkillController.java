@@ -18,8 +18,9 @@ public class SkillController {
     @Autowired
     private SkillRepository skillRepository;
 
-    @GetMapping("index")
-    public String listSkillsInDatabase(Model model){
+    @GetMapping("")
+    public String index(Model model){
+        model.addAttribute("title", "title");
         model.addAttribute("skills", skillRepository.findAll());
         return "skills/index";
     }
