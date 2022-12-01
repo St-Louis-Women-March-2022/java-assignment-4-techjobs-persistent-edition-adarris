@@ -22,11 +22,13 @@ public class EmployerController {
     public String index(Model model){
         model.addAttribute("title", "title");
         model.addAttribute("employers", employerRepository.findAll());
+
         return "employers/index";
     }
     @GetMapping("add")
     public String displayAddEmployerForm(Model model) {
         model.addAttribute(new Employer());
+
         return "employers/add";
     }
 
