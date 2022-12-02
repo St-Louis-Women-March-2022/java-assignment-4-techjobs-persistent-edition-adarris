@@ -12,7 +12,7 @@ public abstract class AbstractEntity {
     @GeneratedValue
     @Id
     private int id;
-    @NotBlank
+    @NotBlank(message="Please give a name.")
     @Size(min = 1, max=255)
     private String name;
 
