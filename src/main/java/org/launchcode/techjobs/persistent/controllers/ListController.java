@@ -41,7 +41,7 @@ public class ListController {
     public String list(Model model) {
         model.addAttribute("employers", employerRepository.findAll());
         model.addAttribute("skills", skillRepository.findAll());
-        model.addAttribute("jobs", jobRepository.findAll());
+//        model.addAttribute("jobs", jobRepository.findAll());
 
         return "list";
     }
